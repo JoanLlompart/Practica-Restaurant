@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="icon" href="/img/iconFavicon.png" />-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_package_v0/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_package_v0/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_package_v0/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_package_v0/site.webmanifest">
+    <link rel="mask-icon" href="/favicon_package_v0/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Elegante</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <!-- Barra de navegación -->
+    <nav class="bg-gray-900 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Restaurante Elegante</a>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:text-gray-300">Inicio</a></li>
+                <li><a href="#" class="hover:text-gray-300">Menú</a></li>
+                <li><a href="#" class="hover:text-gray-300">Reservas</a></li>
+                <li><a href="#" class="hover:text-gray-300">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Encabezado -->
+    <header class="bg-cover bg-center h-64 flex items-center text-white"
+        style="background-image: url('https://via.placeholder.com/1500x400')">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">Bienvenido a nuestro Restaurante</h1>
+            <p class="mt-2">Descubre una experiencia culinaria única</p>
+        </div>
+    </header>
+
+    <!-- Sección de platos -->
+    <section class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6">Nuestro Menú</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Ejemplo de plato -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/400x300" alt="Plato del menú"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Nombre del Plato</h3>
+                        <p class="text-gray-700">Descripción corta del plato. Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="font-bold text-gray-800">$20</span>
+                            <button class="bg-gray-900 text-white px-4 py-2 rounded-lg">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Puedes añadir más platos aquí -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de reserva -->
+    <section class="bg-gray-100 py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6">Reserva tu mesa</h2>
+            <form class="max-w-lg mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Nombre"
+                        class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-gray-500">
+                    <input type="email" placeholder="Correo electrónico"
+                        class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-gray-500">
+                </div>
+                <div class="mt-4">
+                    <input type="date"
+                        class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-gray-500">
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="w-full bg-gray-900 text-white px-4 py-2 rounded-lg">Reservar
+                        Mesa</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-gray-900 text-white py-4 text-center">
+        <p>Derechos de autor © 2023 Restaurante Elegante. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
