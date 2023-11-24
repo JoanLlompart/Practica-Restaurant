@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Elegante</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-xl font-bold">Restaurante Elegante</div>
+            <div class="hidden md:block">
+                <a href="#inicio" class="mx-4 hover:text-gray-300">Inicio</a>
+                <a href="#menu" class="mx-4 hover:text-gray-300">Menú</a>
+                <a href="#reservas" class="mx-4 hover:text-gray-300">Reservas</a>
+                <a href="#contacto" class="mx-4 hover:text-gray-300">Contacto</a>
+            </div>
+            <div class="md:hidden">
+                <!-- Icono de menú para dispositivos móviles -->
+                <button id="mobile-menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido -->
+    <div id="inicio" class="py-16 px-4 bg-gray-100">
+        <h1 class="text-4xl font-bold text-center mb-8">Bienvenidos</h1>
+        <!-- Contenido de la sección de inicio -->
+    </div>
+
+    <div id="menu" class="py-16 px-4 bg-white">
+        <h2 class="text-4xl font-bold text-center mb-8">Nuestro Menú</h2>
+        <!-- Contenido de la sección del menú -->
+    </div>
+
+    <div id="reservas" class="py-16 px-4 bg-gray-100">
+        <h2 class="text-4xl font-bold text-center mb-8">Reserva tu mesa</h2>
+        <!-- Contenido de la sección de reservas -->
+    </div>
+
+    <div id="contacto" class="py-16 px-4 bg-white">
+        <h2 class="text-4xl font-bold text-center mb-8">Contacto</h2>
+        <!-- Contenido de la sección de contacto -->
+    </div>
+
+    <!-- Scripts para manejar el menú desplegable en dispositivos móviles -->
+    <script>
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+            var nav = document.querySelector('.hidden.md\\:block');
+            nav.classList.toggle('block');
+        });
+    </script>
+
+</body>
+
+</html>
