@@ -4,63 +4,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante Elegante</title>
+    <title>Cafeteria Ca'n Arias</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2684e8a577.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/proba2.css">
 </head>
 
 <body>
-
-    <!-- Navbar -->
-    <nav class="bg-gray-800 text-white py-4">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="text-xl font-bold">Restaurante Elegante</div>
-            <div class="hidden md:block">
-                <a href="#inicio" class="mx-4 hover:text-gray-300">Inicio</a>
-                <a href="#menu" class="mx-4 hover:text-gray-300">Menú</a>
-                <a href="#reservas" class="mx-4 hover:text-gray-300">Reservas</a>
-                <a href="#contacto" class="mx-4 hover:text-gray-300">Contacto</a>
+    <nav class="bg-gray-800 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <a href="proba2.html" class="text-3xl font-bold"><i class="fas fa-mug-hot"></i> Cafeteria Ca'n Arias</a>
             </div>
-            <div class="md:hidden">
-                <!-- Icono de menú para dispositivos móviles -->
-                <button id="mobile-menu-toggle" class="focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            <div class="lg:hidden">
+                <button id="navbar-toggle" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
             </div>
+            <div class="hidden lg:flex space-x-4">
+                <a href="carta.html" class="hover:text-gray-300 text-base lg:text-lg"><i
+                        class="fa-solid fa-utensils"></i> Carta</a>
+                <a href="#" class="hover:text-gray-300 text-base lg:text-lg"><i class="fa-solid fa-phone"></i>
+                    Reservas</a>
+                <a href="#" class="hover:text-gray-300 text-base lg:text-lg"><i
+                        class="fa-solid fa-map-location-dot"></i> Como LLegar</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Contenido -->
-    <div id="inicio" class="py-16 px-4 bg-gray-100">
-        <h1 class="text-4xl font-bold text-center mb-8">Bienvenidos</h1>
-        <!-- Contenido de la sección de inicio -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-gray-800 text-white">
+        <a href="carta.html" class="block py-2 px-4 hover:bg-gray-600">
+            <i class="fa-solid fa-utensils"></i> Carta
+        </a>
+        <a href="#" class="block py-2 px-4 hover:bg-gray-600">
+            <i class="fa-solid fa-phone"></i> Reservas
+        </a>
+        <a href="#" class="block py-2 px-4 hover:bg-gray-600">
+            <i class="fa-solid fa-map-location-dot"></i> Como LLegar
+        </a>
     </div>
 
-    <div id="menu" class="py-16 px-4 bg-white">
+    <!-- Inicio -->
+    <div id="inicio" class="py-16 px-4 bg-gray-100 cursor-pointer" onclick="toggleSection('inicio')">
+        <h2 class="text-4xl font-bold text-center mb-8">Bienvenido</h2>
+        <div id="seccionInicio" style="display: none;">
+            <p>Información adicional sobre la sección de inicio.</p>
+        </div>
+    </div>
+
+    <!-- Menú -->
+    <div id="menu" class="py-16 px-4 bg-white cursor-pointer" onclick="toggleSection('menu')">
         <h2 class="text-4xl font-bold text-center mb-8">Nuestro Menú</h2>
-        <!-- Contenido de la sección del menú -->
+        <div id="seccionMenu" style="display: none;">
+            <p>Información adicional sobre la sección de menú.</p>
+        </div>
     </div>
 
-    <div id="reservas" class="py-16 px-4 bg-gray-100">
-        <h2 class="text-4xl font-bold text-center mb-8">Reserva tu mesa</h2>
-        <!-- Contenido de la sección de reservas -->
+    <!-- Reservas -->
+    <div id="reservas" class="py-16 px-4 bg-gray-100 cursor-pointer" onclick="toggleSection('reservas')">
+        <h2 class="text-4xl font-bold text-center mb-8 text-white">Reserva tu mesa</h2>
+        <div id="seccionReservas" class="hidden bg-white p-8 rounded shadow-md sm:w-96 mx-auto" style="display: none;">
+            <h2 class="text-2xl font-semibold mb-4">Reserva tu mesa</h2>
+
+            <form src="proba2.html"method="get">
+                <!-- Nombre -->
+                <div class="mb-4">
+                    <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Por favor, introduce el nombre"
+                        class="w-full px-3 py-2 border rounded-md">
+                </div>
+
+                <!-- Teléfono -->
+                <div class="mb-4">
+                    <label for="telefono" class="block text-gray-700 text-sm font-bold mb-2">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono"
+                        placeholder="Por favor, introduce el numero de telefono"
+                        class="w-full px-3 py-2 border rounded-md">
+                </div>
+
+                <!-- Número de Personas -->
+                <div class="mb-4">
+                    <label for="personas" class="block text-gray-700 text-sm font-bold mb-2">Número de
+                        Personas</label>
+                    <input type="number" id="personas" name="personas"
+                        placeholder="Por favor, introduce el número de personas"
+                        class="w-full px-3 py-2 border rounded-md">
+                </div>
+
+                <!-- Fecha y Hora -->
+                <div class="mb-4">
+                    <label for="fecha" class="block text-gray-700 text-sm font-bold mb-2">Fecha y Hora</label>
+                    <input type="datetime-local" id="fecha" name="fecha" class="w-full px-3 py-2 border rounded-md">
+                </div>
+
+
+                <!-- Comentarios -->
+                <div class="mb-4">
+                    <label for="comentarios" class="block text-gray-700 text-sm font-bold mb-2">Comentarios</label>
+                    <textarea id="comentarios" name="comentarios" rows="3"
+                        class="w-full px-3 py-2 border rounded-md"></textarea>
+                </div>
+
+                <!-- Botón de Enviar -->
+                <button type="submit"
+                    class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 block mx-auto mt-4">
+                    Enviar Reserva
+                </button>
+            </form>
+        </div>
     </div>
 
-    <div id="contacto" class="py-16 px-4 bg-white">
-        <h2 class="text-4xl font-bold text-center mb-8">Contacto</h2>
-        <!-- Contenido de la sección de contacto -->
-    </div>
+    <footer class="flex flex-wrap justify-between p-8 bg-black text-white">
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-4">
+            <h1 class="text-lg font-semibold mb-4">Contacto</h1>
+            <p>Teléfono: 971 14 29 65</p>
+            <p>Email: arias@gmail.com</p>
+        </div>
 
-    <!-- Scripts para manejar el menú desplegable en dispositivos móviles -->
-    <script>
-        document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
-            var nav = document.querySelector('.hidden.md\\:block');
-            nav.classList.toggle('block');
-        });
-    </script>
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-4">
+            <h1 class="text-lg font-semibold mb-4">Horarios</h1>
+            <p>Lunes a Viernes: 5:15 AM - 16:30 PM</p>
+            <p>Sábado: 5:15 AM - 14:00 PM</p>
+            <p>Domingo: Cerrado</p>
+        </div>
+
+        <div style="width: 100%">
+            <iframe width="400" height="260" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;q=Carrer%20Joan%20Monserrat%20Parets,%202,%2007007%20Palma,%20Balearic%20Islands+(Ca'n%20Arias)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                <a href="https://www.gps.ie/sport-gps/">fitness tracker</a>
+            </iframe>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 
