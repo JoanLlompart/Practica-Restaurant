@@ -24,19 +24,25 @@ footer {
     text-shadow: 0 0 5px rgb(30, 41, 59), 0 0 10px rgb(157, 23, 77), 0 0 15px rgb(24, 24, 27);
 }
 
-.bg-gradient-conic {
-    /* Aplica el gradiente conic al fondo */
-    background-image: conic-gradient(rgb(30, 41, 59), rgb(157, 23, 77), rgb(24, 24, 27));
+#menu {
+    /* Establece el fondo negro */
+    background-color: black;
 }
+
 
 .gradient-text {
-    /* Crea un efecto de gradiente al texto utilizando una superposición y máscara */
-    position: relative;
-    z-index: 1;
-    color: white; /* Establece el color del texto */
+    /* Establece el color del texto como transparente */
+    color: transparent;
+    /* Aplica el gradiente conic al fondo del texto utilizando background-clip: text */
+    background-image: conic-gradient(rgb(30, 41, 59), rgb(157, 23, 77), rgb(24, 24, 27));
+    /* Hace que el gradiente del fondo solo aparezca donde está el texto */
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
+
 .gradient-text::before {
+    /* Aplica el gradiente conic solo al texto */
     content: attr(data-text);
     position: absolute;
     top: 0;
