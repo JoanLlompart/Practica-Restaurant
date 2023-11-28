@@ -24,6 +24,33 @@ footer {
     text-shadow: 0 0 5px rgb(30, 41, 59), 0 0 10px rgb(157, 23, 77), 0 0 15px rgb(24, 24, 27);
 }
 
+.bg-gradient-conic {
+    /* Aplica el gradiente conic al fondo */
+    background-image: conic-gradient(rgb(30, 41, 59), rgb(157, 23, 77), rgb(24, 24, 27));
+}
+
+.gradient-text {
+    /* Crea un efecto de gradiente al texto utilizando una superposición y máscara */
+    position: relative;
+    z-index: 1;
+    color: white; /* Establece el color del texto */
+}
+
+.gradient-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: conic-gradient(rgb(30, 41, 59), rgb(157, 23, 77), rgb(24, 24, 27));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
 #seccionReservas,
 #seccionInicio,
 #seccionMenu {
