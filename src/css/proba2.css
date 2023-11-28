@@ -18,7 +18,6 @@ footer {
     background-image: conic-gradient(var(--tw-gradient-stops));
     color: transparent; /* Hacemos el texto transparente */
 }
-
 .text-gradient {
     /* Creamos un efecto de gradiente para el texto utilizando colores */
     text-shadow: 0 0 5px rgb(30, 41, 59), 0 0 10px rgb(157, 23, 77), 0 0 15px rgb(24, 24, 27);
@@ -46,7 +45,6 @@ footer {
 
 
 .gradient-text::before {
-    /* Aplica el gradiente conic solo al texto */
     content: attr(data-text);
     position: absolute;
     top: 0;
@@ -60,24 +58,45 @@ footer {
     color: transparent;
 }
 
-.gradient-text-nav {
-    position: relative;
-    z-index: 1;
-    overflow: hidden; /* Asegura que el contenido no se salga del contenedor */
-}
 
+/*bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-slate-900 via-purple-200 to-cyan-200 */
+/*
 .gradient-text-nav::before {
-    content: '';
+    content: attr(data-text);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: conic-gradient(at left top, rgb(30, 41, 59), rgb(243, 232, 255), rgb(165, 243, 252));
+    background-image: conic-gradient(at left center, rgb(15, 23, 42), rgb(233, 213, 255), rgb(165, 243, 252));
     -webkit-background-clip: text;
     background-clip: text;
-    opacity: 0.7; /* Ajusta la opacidad del gradiente para equilibrar con el texto */
+    color: transparent;
+}
+*/
+
+.gradient-text-nav {
+    /* Establece el color del texto como transparente */
+    color: transparent;
+    /* Aplica el gradiente conic al fondo del texto utilizando background-clip: text */
+    background-image: conic-gradient(rgb(30, 41, 59), rgb(157, 23, 77), rgb(24, 24, 27));
+    /* Hace que el gradiente del fondo solo aparezca donde está el texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.gradient-text-nav::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: conic-gradient(rgb(30, 41, 59), rgb(157, 23, 77), rgb(24, 24, 27));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 
