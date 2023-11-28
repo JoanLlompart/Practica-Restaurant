@@ -1,5 +1,5 @@
 #reservas {
-    background-image: url('/src//img/fondo\ formulario.jpg');
+    background-image: url('/src/img/fondo\ formulario.jpg');
     background-size: cover; /* Para que la imagen cubra todo el fondo */
     background-position: center; /* Para centrar la imagen en la sección */
     background-repeat: no-repeat; /* Para que la imagen no se repita */
@@ -8,6 +8,20 @@
 footer {
     margin-top: auto;
     position: relative;
+}
+#inicio {
+    background-image: conic-gradient(rgb(30, 41, 59), rgb(157, 23, 77), rgb(24, 24, 27));
+    color: white; /* Cambia el color del texto si es necesario para que sea legible sobre el gradiente */
+}
+
+.bg-gradient-conic {
+    background-image: conic-gradient(var(--tw-gradient-stops));
+    color: transparent; /* Hacemos el texto transparente */
+}
+
+.text-gradient {
+    /* Creamos un efecto de gradiente para el texto utilizando colores */
+    text-shadow: 0 0 5px rgb(30, 41, 59), 0 0 10px rgb(157, 23, 77), 0 0 15px rgb(24, 24, 27);
 }
 
 #seccionReservas,
