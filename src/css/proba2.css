@@ -29,6 +29,10 @@ footer {
     background-color: black;
 }
 
+.gradient-bg {
+    /* Aplica el gradiente lineal como fondo */
+    background-image: linear-gradient(rgb(17, 24, 39), rgb(75, 85, 99));
+}
 
 .gradient-text {
     /* Establece el color del texto como transparente */
@@ -55,6 +59,27 @@ footer {
     background-clip: text;
     color: transparent;
 }
+
+.gradient-text-nav {
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Asegura que el contenido no se salga del contenedor */
+}
+
+.gradient-text-nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: conic-gradient(at left top, rgb(30, 41, 59), rgb(243, 232, 255), rgb(165, 243, 252));
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0.7; /* Ajusta la opacidad del gradiente para equilibrar con el texto */
+}
+
 
 
 #seccionReservas,
