@@ -1,22 +1,19 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const menuItems = document.querySelectorAll('.menu-item');
-    menuItems.forEach(item => {
-        item.addEventListener('click', function (event) {
-            event.preventDefault();
-            const sectionId = this.getAttribute('data-section');
-            showSection(sectionId);
-        });
-    });
+const toggleButton = document.getElementById('navbar-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
 
-    function showSection(sectionId) {
-        const sections = document.querySelectorAll('.menu-section');
-        sections.forEach(section => {
-            section.classList.add('hidden');
-        });
-
-        const selectedSection = document.getElementById(sectionId);
-        if (selectedSection) {
-            selectedSection.classList.remove('hidden');
-        }
-    }
+toggleButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
 });
+
+function toggleSection(sectionId) {
+    var seccion = document.getElementById(sectionId);
+
+    // Verifica si la sección está oculta
+    var estaOculta = seccion.style.display === 'none' || window.getComputedStyle(seccion).display === 'none';
+
+    if (estaOculta) {
+        seccion.style.display = 'block';
+    } else {
+        seccion.style.display = 'none';
+    }
+}
