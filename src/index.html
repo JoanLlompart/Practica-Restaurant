@@ -1,122 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <!--<link rel="icon" href="/img/iconFavicon.png" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteria Ca'n Arias</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon_package_v0/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon_package_v0/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon_package_v0/favicon-16x16.png">
     <link rel="manifest" href="/favicon_package_v0/site.webmanifest">
     <link rel="mask-icon" href="/favicon_package_v0/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafeteria Ca'n Arias</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2684e8a577.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/carta.css">
+
+    <script src="https://translate.google.com/translate_a/element.js?hl=es"></script>
+    <link rel="stylesheet" href="css/index.css">
 </head>
-<body class="bg-gray-200">
-    <nav class="bg-gray-900 text-white p-6">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-3xl font-bold"><i class="fas fa-mug-hot"></i> Cafeteria Ca'n Arias</a>
-            <ul class="flex space-x-6">
-                <li class="text-2xl"><a href="carta.html" class="hover:text-gray-300"><i
-                            class="fa-solid fa-utensils"></i> Carta</a></li>
-                <li class="text-2xl"><a href="#" class="hover:text-gray-300"><i class="fa-solid fa-phone"></i>
-                        Reservas</a></li>
-                <li class="text-2xl"><a href="#" class="hover:text-gray-300"><i
-                            class="fa-solid fa-map-location-dot"></i> Como LLegar</a></li>
-            </ul>
+<body>
+    <nav class="gradient-text-nav">
+        <div class="container mx-auto flex justify-between items-center ">
+            <div>
+                <a href="proba2.html" class="text-3xl font-bold"><i class="fas fa-mug-hot"></i> Cafeteria Ca'n Arias</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="navbar-toggle" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex space-x-4">
+                <a href="carta.html" class="hover:text-gray-300 text-base lg:text-lg"><i
+                        class="fa-solid fa-utensils"></i> Carta</a>
+                <a href="#" class="hover:text-gray-300 text-base lg:text-lg"><i class="fa-solid fa-phone"></i>
+                    Reservas</a>
+                <a href="#" class="hover:text-gray-300 text-base lg:text-lg"><i
+                        class="fa-solid fa-map-location-dot"></i> Como LLegar</a>
+            </div>
         </div>
     </nav>
-    <header class="bg-cover bg-center h-64 flex items-center text-white"
-        style="background-image: url('https://via.placeholder.com/1500x400')">
-        <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold">Bienvenido Cafeteria Ca'n Arias</h1>
-            <p class="mt-2">Descubre una experiencia culinaria Ãºnica</p>
-        </div>
-    </header>
-    <div class="flex justify-around mt-8">
-        <!-- Cuadrado 1 - Bebidas -->
-        <a href="#bebidas-section" class="w-60 h-64 rounded-lg overflow-hidden shadow-md bg-white">
-            <img src="https://img.freepik.com/vector-premium/dos-copas-champana-color-dorado-burbujas_667176-71.jpg"
-                alt="Bebidas" class="w-full h-40 object-cover mb-4">
-            <div class="p-4">
-                <h3 class="text-2xl font-bold text-center font-serif mb-2">Bebidas</h3>
-            </div>
-        </a>
 
-        <!-- Cuadrado 2 - Platos -->
-        <a href="#platos-section" class="w-60 h-64 rounded-lg overflow-hidden shadow-md bg-white">
-            <img src="https://previews.123rf.com/images/blankstock/blankstock2009/blankstock200900180/154928116-signo-de-cubiertos-icono-de-comida-tenedor-s%C3%ADmbolo-de-cuchillo-patr%C3%B3n-de-c%C3%ADrculos-amarillos.jpg"
-                alt="Platos" class="w-full h-40 object-cover mb-4">
-            <div class="p-4">
-                <h3 class="text-2xl font-bold text-center font-serif mb-2">Platos</h3>
-            </div>
+    <div id="mobile-menu" class="lg:hidden hidden bg-gray-800 text-white">
+        <a href="carta.html" class="block py-2 px-4 hover:bg-gray-600">
+            <i class="fa-solid fa-utensils"></i> Carta
         </a>
-
-        <!-- Cuadrado 3 - Postres -->
-        <a href="#postres-section" class="w-60 h-64 rounded-lg overflow-hidden shadow-md bg-white">
-            <img src="data:image/png;base64,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"
-                alt="Postres" class="w-full h-40 object-cover mb-4">
-            <div class="p-4">
-                <h3 class="text-2xl font-bold text-center font-serif mb-2">Postres</h3>
-            </div>
+        <a href="#" class="block py-2 px-4 hover:bg-gray-600">
+            <i class="fa-solid fa-phone"></i> Reservas
+        </a>
+        <a href="#" class="block py-2 px-4 hover:bg-gray-600">
+            <i class="fa-solid fa-map-location-dot"></i> Como LLegar
         </a>
     </div>
+</div>
 
-    <!-- SecciÃ³n de Bebidas -->
-    <div id="bebidas-section" class="text-center py-3">
-        <h2 class="text-5xl font-bold text-yellow-300">BEBIDAS</h2>
-    </div>
-    <div class="navbar p-4 bg-black text-white">
-        <!-- Agrega tus elementos del menÃº aquÃ­ -->
-        <a href="#" class="menu-item" data-section="bebidas">BEBIDAS</a>
-        <a href="#" class="menu-item" data-section="refresocs">REFRESCOS</a>
-        <a href="#" class="menu-item" data-section="cafes">CAFE</a>
-        <a href="#" class="menu-item" data-section="carajillo">CARAJILLO</a>
-        <a href="#" class="menu-item" data-section="cerveza">CERVEZA</a>
-    </div>
-
-    <div id="bebidas" class="menu-section hidden mt-4 ml-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <!-- Cada bebida se representa como una tarjeta con mÃ¡rgenes y espaciado -->
-            <div class="bg-white p-4 rounded-lg shadow-md space-y-2">
-                <div class="font-bold text-xl">CafÃ©</div>
-                <div class="text-gray-600">DescripciÃ³n de la bebida si es necesario.</div>
-                <div class="text-2xl font-bold text-green-600">2,00 â‚¬</div>
-            </div>
-            <!-- Repite esta estructura para cada bebida -->
+    <!-- Inicio -->
+    <div id="inicio" class="py-16 px-4 bg-gray-100 cursor-pointer">
+        <h2 class="text-4xl font-bold text-center mb-8" onclick="toggleSection('seccionInicio')">Bienvenido</h2>
+        <div id="seccionInicio">
+            <p>Información adicional sobre la sección de inicio.</p>
         </div>
     </div>
+    <!-- Casta -->
 
-    <!-- SecciÃ³n de platos -->
-    <div id="platos-section" class="text-center py-3">
-        <h2 class="text-5xl font-bold text-yellow-300">PLATOS</h2>
+    <div id="menu" class="py-16 px-4 bg-black cursor-pointer">
+        <h2 class="text-4xl font-bold text-center mb-8 gradient-text" onclick="toggleSection('seccionMenu')">Nuestro
+            Menú</h2>
+        <div id="seccionMenu">
+            <p>Información adicional sobre la sección de menú.</p>
+        <div class="tarjeta bg-white p-6 border border-gray-300 rounded-md" onclick="toggleTarjeta(this)">
+            <div class="contenido-tarjeta flex items-center w-full aspect-w-1 aspect-h-1">
+                <i class="fas fa-burger text-lg mr-2"></i>
+                <h2 class="font-bold text-lg">Hamburguesa</h2>
+            </div>
+            <div class="flecha">▼</div>
+            
+            <!-- Contenido adicional oculto por defecto -->
+            <div class="contenido-adicional hidden mt-4">
+                <p>Tomate, cebolla y lechuga.</p>
+            </div>
+        </div>
     </div>
-    <div class="navbar p-4 bg-black text-white">
-        <!-- Agrega tus elementos del menÃº aquÃ­ -->
-        <a href="#" class="menu-item" data-section="bebidas">BEBIDAS</a>
-        <a href="#" class="menu-item" data-section="refresocs">REFRESCOS</a>
-        <a href="#" class="menu-item" data-section="cafes">CAFE</a>
-        <a href="#" class="menu-item" data-section="carajillo">CARAJILLO</a>
-        <a href="#" class="menu-item" data-section="cerveza">CERVEZA</a>
+    </div>
+    <!-- Reservas -->
+    <div id="reservas" class="py-16 px-4 bg-gray-100 cursor-pointer">
+        <h2 class="text-4xl font-bold text-center mb-8 text-white" onclick="toggleSection('seccionReservas')">Reserva tu
+            mesa</h2>
+        <div id="seccionReservas" class="hidden bg-white p-8 rounded shadow-md sm:w-96 mx-auto">
+            <h2 class="text-2xl font-semibold mb-4">Reserva tu mesa</h2>
+
+            <form src="index.html" method="get">
+                <!-- Nombre -->
+                <div class="mb-4">
+                    <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Por favor, introduce el nombre"
+                        class="w-full px-3 py-2 border rounded-md" required>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="mb-4">
+                    <label for="telefono" class="block text-gray-700 text-sm font-bold mb-2">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono"
+                        placeholder="Por favor, introduce el numero de telefono"
+                        class="w-full px-3 py-2 border rounded-md" required>
+                </div>
+
+                <!-- Número de Personas -->
+                <div class="mb-4">
+                    <label for="personas" class="block text-gray-700 text-sm font-bold mb-2">Número de
+                        Personas</label>
+                    <input type="number" id="personas" name="personas"
+                        placeholder="Por favor, introduce el número de personas"
+                        class="w-full px-3 py-2 border rounded-md" required>
+                </div>
+
+                <!-- Fecha y Hora -->
+                <div class="mb-4">
+                    <label for="fecha" class="block text-gray-700 text-sm font-bold mb-2">Fecha y Hora</label>
+                    <input type="datetime-local" id="fecha" name="fecha" class="w-full px-3 py-2 border rounded-md"
+                        required>
+                </div>
+
+
+                <!-- Comentarios -->
+                <div class="mb-4">
+                    <label for="comentarios" class="block text-gray-700 text-sm font-bold mb-2">Comentarios</label>
+                    <textarea id="comentarios" name="comentarios" rows="3"
+                        class="w-full px-3 py-2 border rounded-md"></textarea>
+                </div>
+
+                <!-- Botón de Enviar -->
+                <button type="submit"
+                    class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 block mx-auto mt-4">
+                    Enviar Reserva
+                </button>
+            </form>
+        </div>
     </div>
 
-    <!-- SecciÃ³n de platos -->
-    <div id="postres-section" class="text-center py-3">
-        <h2 class="text-5xl font-bold text-yellow-300">PLATOS</h2>
-    </div>
-    <div class="navbar p-4 bg-black text-white">
-        <!-- Agrega tus elementos del menÃº aquÃ­ -->
-        <a href="#" class="menu-item" data-section="bebidas">BEBIDAS</a>
-        <a href="#" class="menu-item" data-section="refresocs">REFRESCOS</a>
-        <a href="#" class="menu-item" data-section="cafes">CAFE</a>
-        <a href="#" class="menu-item" data-section="carajillo">CARAJILLO</a>
-        <a href="#" class="menu-item" data-section="cerveza">CERVEZA</a>
-    </div>
 
-    <script src="js/scrip.js"></script>
+    <footer class="flex flex-wrap justify-between p-8 bg-black text-white">
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-4">
+            <h1 class="text-lg font-semibold mb-4"><i class="fa-regular fa-address-book"> CONTACTO</i></h1>
+            <p><i class="fa-solid fa-phone"></i> 971 14 29 65</p>
+            <p><a href="https://www.google.com/intl/es/gmail/about/"><i class="fa-regular fa-envelope"></i>
+                    canArias@gmail.com</a></p>
+            <p><a target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>
+                    Cafeteria_Can_Arias</a></p>
+            <p><a href="https://www.snapchat.com/es"><i class="fa-brands fa-snapchat"></i> Cafeteria_Can_Arias</a></p>
+            <p><a href="https://www.facebook.com/?locale=ca_ES"><i class="fa-brands fa-facebook"></i>
+                    Cafeteria_Can_Arias</a></p>
+
+        </div>
+
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-4">
+            <h1 class="text-lg font-semibold mb-4"> <i class="fa-solid fa-location-dot"> UBICACIÓN</i></h1>
+            <div class="aspect-w-2 aspect-h-1">
+                <iframe class="object-cover w-full h-full"
+                    src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;q=Carrer%20Joan%20Monserrat%20Parets,%202,%2007007%20Palma,%20Balearic%20Islands+(Ca'n%20Arias)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-4">
+            <h1 class="text-lg font-semibold mb-4"><i class="fa-solid fa-calendar-days"> Horarios</i></h1>
+            <p>Lunes a Viernes: 5:15 AM - 16:30 PM</p>
+            <p>Sábado: 5:15 AM - 14:00 PM</p>
+            <p>Domingo: Cerrado</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script async src="js/traductor.js"></script>
 </body>
 
 </html>

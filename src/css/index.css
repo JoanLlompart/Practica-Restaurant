@@ -101,3 +101,35 @@ footer {
     display: none;
 }
 
+.tarjeta {
+    width: 400px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.contenido-tarjeta {
+    padding: 10px;
+    text-align: center;
+}
+
+.flecha {
+    text-align: center;
+    cursor: pointer;
+}
+.tarjeta {
+    width: 200px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.contenido-tarjeta {
+    padding: 10px;
+    text-align: center;
+}
+
+.flecha {
+    text-align: center;
+    cursor: pointer;
+}

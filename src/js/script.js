@@ -17,3 +17,12 @@ function toggleSection(sectionId) {
         seccion.style.display = 'none';
     }
 }
+
+function toggleTarjeta(tarjeta) {
+    var contenidoAdicional = tarjeta.querySelector('.contenido-adicional');
+    if (contenidoAdicional.classList.contains("hidden")) {
+        contenidoAdicional.classList.remove("hidden");
+    } else {
+        contenidoAdicional.classList.add("hidden");
+    }
+}

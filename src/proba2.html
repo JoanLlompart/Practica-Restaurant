@@ -17,6 +17,39 @@
     <link rel="stylesheet" href="css/proba2.css">
 </head>
 <body>
+    <div id="google_translate_element"></div>
+    <select id="language-select">
+        <option value="en">Inglés</option>
+        <option value="fr">Francés</option>
+        <!-- Agrega más opciones de idioma según sea necesario -->
+    </select>
+    <button onclick="translate()">Traducir</button>
+    
+    <script>
+        function translate() {
+            const originalText = document.body.innerHTML; // Obtén el contenido original
+            const selectedLanguage = document.getElementById('language-select').value;
+            const apiKey = 'TU_CLAVE_DE_API'; // Reemplaza con tu clave de API
+            const apiUrl = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`;
+            
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    q: originalText,
+                    target: selectedLanguage,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                const translatedText = data.data.translations[0].translatedText;
+                document.body.innerHTML = translatedText; // Reemplaza el contenido con la traducción
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
     <nav class="gradient-text-nav  bg-black">
         <div class="container mx-auto flex justify-between items-center">
             <div>
