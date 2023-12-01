@@ -22,12 +22,10 @@ footer {
     /* Creamos un efecto de gradiente para el texto utilizando colores */
     text-shadow: 0 0 5px rgb(30, 41, 59), 0 0 10px rgb(157, 23, 77), 0 0 15px rgb(24, 24, 27);
 }
-
 #menu {
     /* Establece el fondo negro */
     background-color: black;
 }
-
 .gradient-bg {
     /* Aplica el gradiente lineal como fondo */
     background-image: linear-gradient(rgb(17, 24, 39), rgb(75, 85, 99));
@@ -42,7 +40,6 @@ footer {
     -webkit-background-clip: text;
     background-clip: text;
 }
-
 
 .gradient-text::before {
     content: attr(data-text);
@@ -75,7 +72,6 @@ footer {
     color: transparent;
 }
 */
-
 .gradient-text-nav {
     /* Establece el color del texto como transparente */
     color: transparent;
@@ -104,3 +100,4 @@ footer {
 #seccionMenu {
     display: none;
 }
+
