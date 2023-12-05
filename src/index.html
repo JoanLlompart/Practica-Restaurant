@@ -62,28 +62,97 @@
             <p>Información adicional sobre la sección de inicio.</p>
         </div>
     </div>
-    <!-- Casta -->
+    <!-- Carta -->
 
     <div id="menu" class="py-16 px-4 bg-black cursor-pointer">
-        <h2 class="text-4xl font-bold text-center mb-8 gradient-text" onclick="toggleSection('seccionMenu')">Nuestro
-            Menú</h2>
-        <div id="seccionMenu">
-            <p>Información adicional sobre la sección de menú.</p>
-        <div class="tarjeta bg-white p-6 border border-gray-300 rounded-md" onclick="toggleTarjeta(this)">
-            <div class="contenido-tarjeta flex items-center w-full aspect-w-1 aspect-h-1">
-                <i class="fas fa-burger text-lg mr-2"></i>
-                <img src="https://img.freepik.com/fotos-premium/hamburguesa-queso-sobre-fondo-blanco-aislado_742252-2233.jpg" alt="">
-                <h2 class="font-bold text-lg">Hamburguesa</h2>
+        <h2 class="text-4xl font-bold text-center mb-8 gradient-text" onclick="toggleSection('seccionMenu')">Nuestro Menú</h2>
+        <div id="seccionMenu" class="flex flex-wrap justify-around">
+            <div class="tarjeta bg-white p-6 border border-gray-300 rounded-md md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4" onclick="toggleTarjeta(event)">
+                <div class="contenido-tarjeta flex flex-col items-center w-full aspect-w-1 aspect-h-1">
+                    <img src="img/ensalada.jpg" alt="ensalada" class="mb-2">
+                    <i class="fas fa-burger text-lg mb-2"> Ensalada</i>
+                </div>
+                <div class="flecha">▼</div>
+                <div class="contenido-adicional hidden mt-4">
+                    <h2><strong>ENSALADA NORMAL</strong>.......................................4'50€</h2>
+                    <p>lechuga, tomate, cebolla, zanahoria, aceitunas</p>
+                    <h2><strong>ENSALADA MIXTA</strong>............................................6'00€</h2>
+                    <p>lechuga, tomate, cebolla, zanahoria, aceitunas, jamón york,
+                        queso, atún, huevo.
+                    </p>                    
+                    <h2><strong>ENSALADA DE LA CASA</strong> ............................... 6'50€</h2>
+                    <p>lechuga, tomate, cebolla, zanahoria, aceitunas, anchoas,
+                        alcaparras, atún.
+                    </p>   
+                </div>
             </div>
-            <div class="flecha">▼</div>
-            
-            <!-- Contenido adicional oculto por defecto -->
-            <div class="contenido-adicional hidden mt-4">
-                <p>Tomate, cebolla y lechuga.</p>
+    
+            <div class="tarjeta bg-white p-6 border border-gray-300 rounded-md md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4" onclick="toggleTarjeta(event)">
+                <div class="contenido-tarjeta flex flex-col items-center w-full aspect-w-1 aspect-h-1">
+                    <img src="img/hamburguesa.avif" alt="Hamburguesa" class="mb-2">
+                    <i class="fas fa-burger text-lg mb-2"> Hamburguesa</i>
+                </div>
+                <div class="flecha">▼</div>
+                <div class="contenido-adicional hidden mt-4">
+                    <p>Tomate, cebolla y lechuga.............................. 3'50€</p>
+                    <p>Tomate, cebolla y queso................................. 3'80€</p>
+                    <p>Tomate, cebolla, quesa y huevo.................... 4'00€</p>
+                    <p>Tomate, cebolla, queso, huevo y bacon........4'50€</p>
+                </div>
+            </div>
+    
+            <div class="tarjeta bg-white p-6 border border-gray-300 rounded-md md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4" onclick="toggleTarjeta(event)">
+                <div class="contenido-tarjeta flex flex-col items-center w-full aspect-w-1 aspect-h-1">
+                    <img src="img/sándwich.jpg" alt="sandwiches" class="mb-2">
+                    <i class="fa-solid fa-bread-slice mb-2"> Sandwiches</i>
+                </div>
+                <div class="flecha">▼</div>
+                <div class="contenido-adicional hidden mt-4">
+                    <p>Jamon y queso.................................................. 2'50€</p>
+                    <p>Jamon , queso y huevo................................... 3'00€</p>
+                    <p>Vegetal, cebolla, queso, huevo y bacon...... 4'00€</p>
+                </div>
+            </div>
+            <div class="tarjeta bg-white p-6 border border-gray-300 rounded-md md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4" onclick="toggleTarjeta(event)">
+                <div class="contenido-tarjeta flex flex-col items-center w-full aspect-w-1 aspect-h-1">
+                    <img src="img/sándwich.jpg" alt="sandwiches" class="mb-2">
+                    <i class="fa-solid fa-bread-slice mb-2"> Bocadillos</i>
+                </div>
+                <div class="flecha">▼</div>
+                <div class="contenido-adicional hidden mt-4">
+                    <p>Jamon y queso.................................................. 2'50€</p>
+                    <p>Jamon , queso y huevo................................... 3'00€</p>
+                    <p>Vegetal, cebolla, queso, huevo y bacon...... 4'00€</p>
+                </div>
+            </div>
+            <div class="tarjeta bg-white p-6 border border-gray-300 rounded-md md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4" onclick="toggleTarjeta(event)">
+                <div class="contenido-tarjeta flex flex-col items-center w-full aspect-w-1 aspect-h-1">
+                    <img src="img/sándwich.jpg" alt="sandwiches" class="mb-2">
+                    <i class="fa-solid fa-bread-slice mb-2"> Platos Combinados</i>
+                </div>
+                <div class="flecha">▼</div>
+                <div class="contenido-adicional hidden mt-4">
+                    <p>Jamon y queso.................................................. 2'50€</p>
+                    <p>Jamon , queso y huevo................................... 3'00€</p>
+                    <p>Vegetal, cebolla, queso, huevo y bacon...... 4'00€</p>
+                </div>
+            </div>
+            <div class="tarjeta bg-white p-6 border border-gray-300 rounded-md md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4" onclick="toggleTarjeta(event)">
+                <div class="contenido-tarjeta flex flex-col items-center w-full aspect-w-1 aspect-h-1">
+                    <img src="img/sándwich.jpg" alt="sandwiches" class="mb-2">
+                    <i class="fa-solid fa-bread-slice mb-2"> Bebidas</i>
+                </div>
+                <div class="flecha">▼</div>
+                <div class="contenido-adicional hidden mt-4">
+                    <p>Jamon y queso.................................................. 2'50€</p>
+                    <p>Jamon , queso y huevo................................... 3'00€</p>
+                    <p>Vegetal, cebolla, queso, huevo y bacon...... 4'00€</p>
+                </div>
             </div>
         </div>
     </div>
-    </div>
+    
+    
     <!-- Reservas -->
     <div id="reservas" class="py-16 px-4 bg-gray-100 cursor-pointer">
         <h2 class="text-4xl font-bold text-center mb-8 text-white" onclick="toggleSection('seccionReservas')">Reserva tu

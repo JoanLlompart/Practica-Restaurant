@@ -100,7 +100,7 @@ footer {
 #seccionMenu {
     display: none;
 }
-
+/*
 .tarjeta {
     width: 400px;
     border: 1px solid #ccc;
@@ -118,10 +118,13 @@ footer {
     cursor: pointer;
 }
 .tarjeta {
-    width: 200px;
+    width: 400px;
     border: 1px solid #ccc;
     margin: 10px;
     overflow: hidden;
+    display: inline-block;
+    vertical-align: top; 
+    font-size: 16px; 
 }
 
 .contenido-tarjeta {
@@ -132,4 +135,63 @@ footer {
 .flecha {
     text-align: center;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    #seccionMenu {
+        font-size: 16px; 
+    }
+
+    .tarjeta {
+        width: calc(100% - 20px);
+        margin: 10px 0; 
+        display: block; 
+    }
+}
+*/
+#seccionMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tarjeta {
+    flex: 0 0 calc(100% - 2rem); /* En pantallas pequeñas, las tarjetas ocuparán el 100% del ancho */
+    box-sizing: border-box;
+    margin-bottom: 2rem; /* Añade un margen inferior para separar las tarjetas */
+}
+
+@media (min-width: 640px) {
+    .tarjeta {
+        flex: 0 0 calc(50% - 2rem);
+    }
+}
+
+@media (min-width: 768px) {
+    .tarjeta {
+        flex: 0 0 calc(33.33% - 2rem); 
+    }
+}
+
+.contenido-tarjeta img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.flecha {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    #seccionMenu {
+        font-size: 16px; 
+    }
+
+    .tarjeta {
+        width: calc(100% - 20px);
+        margin: 10px 0; 
+        display: block; 
+    }
 }

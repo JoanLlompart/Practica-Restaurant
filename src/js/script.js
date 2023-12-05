@@ -18,11 +18,13 @@ function toggleSection(sectionId) {
     }
 }
 
-function toggleTarjeta(tarjeta) {
+function toggleTarjeta(event) {
+    // Obtén la tarjeta específica que se hizo clic
+    var tarjeta = event.currentTarget;
+
+    // Encuentra el contenido adicional dentro de la tarjeta específica
     var contenidoAdicional = tarjeta.querySelector('.contenido-adicional');
-    if (contenidoAdicional.classList.contains("hidden")) {
-        contenidoAdicional.classList.remove("hidden");
-    } else {
-        contenidoAdicional.classList.add("hidden");
-    }
+
+    // Alternar la clase 'hidden' para mostrar u ocultar el contenido adicional
+    contenidoAdicional.classList.toggle("hidden");
 }
