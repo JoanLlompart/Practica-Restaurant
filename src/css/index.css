@@ -100,67 +100,20 @@ footer {
 #seccionMenu {
     display: none;
 }
-/*
-.tarjeta {
-    width: 400px;
-    border: 1px solid #ccc;
-    margin: 10px;
-    overflow: hidden;
-}
-
-.contenido-tarjeta {
-    padding: 10px;
-    text-align: center;
-}
-
-.flecha {
-    text-align: center;
-    cursor: pointer;
-}
-.tarjeta {
-    width: 400px;
-    border: 1px solid #ccc;
-    margin: 10px;
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: top; 
-    font-size: 16px; 
-}
-
-.contenido-tarjeta {
-    padding: 10px;
-    text-align: center;
-}
-
-.flecha {
-    text-align: center;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-    #seccionMenu {
-        font-size: 16px; 
-    }
-
-    .tarjeta {
-        width: calc(100% - 20px);
-        margin: 10px 0; 
-        display: block; 
-    }
-}
-*/
-#seccionMenu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 
 .tarjeta {
-    flex: 0 0 calc(100% - 2rem); /* En pantallas pequeñas, las tarjetas ocuparán el 100% del ancho */
+    width: 100%; /* Ajusta el ancho al 100% */
+    max-width: 400px; /* Establece un ancho máximo para evitar que se extienda demasiado */
+    margin: 0 auto; /* Centra la tarjeta en el contenedor principal */
+    transition: max-height 0.5s; 
+    flex: 0 0 calc(100% - 2rem); 
     box-sizing: border-box;
-    margin-bottom: 2rem; /* Añade un margen inferior para separar las tarjetas */
+    margin-bottom: 2rem; 
 }
 
+
+
+/*
 @media (min-width: 640px) {
     .tarjeta {
         flex: 0 0 calc(50% - 2rem);
@@ -172,26 +125,16 @@ footer {
         flex: 0 0 calc(33.33% - 2rem); 
     }
 }
-
-.contenido-tarjeta img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover;
+*/
+.imagen-menu {
+    max-width: 100%;  
+    height: auto;     
+    display: block; 
 }
+
 
 .flecha {
     display: flex;
     justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
-    #seccionMenu {
-        font-size: 16px; 
-    }
-
-    .tarjeta {
-        width: calc(100% - 20px);
-        margin: 10px 0; 
-        display: block; 
-    }
-}

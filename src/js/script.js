@@ -8,23 +8,23 @@ toggleButton.addEventListener('click', () => {
 function toggleSection(sectionId) {
     var seccion = document.getElementById(sectionId);
 
-    // Verifica si la sección está oculta
-    var estaOculta = seccion.style.display === 'none' || window.getComputedStyle(seccion).display === 'none';
+    // Toggle the 'hidden' class to show or hide the section
+    seccion.classList.toggle('hidden');
 
-    if (estaOculta) {
-        seccion.style.display = 'block';
-    } else {
-        seccion.style.display = 'none';
+    // Verifica si la sección está oculta después de la toggle
+    var estaOculta = seccion.classList.contains('hidden');
+
+    // Manually set the 'display' property based on the current state
+    seccion.style.display = estaOculta ? 'flex' : ''; // Si está oculta, muestra como 'flex', de lo contrario, usa el valor predeterminado.
+}
+
+function toggleTarjeta(id) {
+        // Obtén la tarjeta específica que se hizo clic
+        var tarjeta = document.getElementById(id);
+
+        // Encuentra el contenido adicional dentro de la tarjeta específica
+        var contenidoAdicional = tarjeta.querySelector('.contenido-adicional');
+
+        // Alternar la clase 'hidden' para mostrar u ocultar el contenido adicional
+        contenidoAdicional.classList.toggle("hidden");
     }
-}
-
-function toggleTarjeta(event) {
-    // Obtén la tarjeta específica que se hizo clic
-    var tarjeta = event.currentTarget;
-
-    // Encuentra el contenido adicional dentro de la tarjeta específica
-    var contenidoAdicional = tarjeta.querySelector('.contenido-adicional');
-
-    // Alternar la clase 'hidden' para mostrar u ocultar el contenido adicional
-    contenidoAdicional.classList.toggle("hidden");
-}
