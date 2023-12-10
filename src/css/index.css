@@ -1,10 +1,7 @@
 #reservas {
-    background-image: url('/src/img/fondo\ formulario.jpg');
-    background-size: cover; /* Para que la imagen cubra todo el fondo */
-    background-position: center; /* Para centrar la imagen en la sección */
-    background-repeat: no-repeat; /* Para que la imagen no se repita */
-    /* Otras propiedades de estilo según tus preferencias */
+    background-color: black;
 }
+
 footer {
     margin-top: auto;
     position: relative;
